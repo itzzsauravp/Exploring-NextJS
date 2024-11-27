@@ -1,4 +1,4 @@
-type POST = {
+export type POST = {
   id: number;
   author: string;
   slug: string;
@@ -9,7 +9,7 @@ const MY_POSTS: POST[] = [
   { id: 2, author: "Saurav", slug: "second-post" },
   { id: 3, author: "Saurav", slug: "third-post" },
 ];
-
-export default  GET() {
-    
-}
+const GET = async () => {
+  return Response.json(MY_POSTS);
+};
+export { GET };
